@@ -108,7 +108,7 @@ def handle_particles():
         p['life'] -= 1
         
         if p['life'] <= 0:
-        particles.remove(p)
+            particles.remove(p)  # Fixed: Added 4 spaces of indentation here
         else:
             alpha = int((p['life'] / p['max_life']) * 200)
             current_size = max(1, int(p['size'] * (p['life'] / p['max_life'])))
